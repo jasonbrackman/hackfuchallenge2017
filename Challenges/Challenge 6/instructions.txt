@@ -1,0 +1,13 @@
+Once decoded, Reinder Cartwright’s desperate message reads as follows:
+
+“HORRIBLE ERROR. EXTREME DANGER. TAKE DISK. TRUST NO-ONE.”
+
+The text carved into the top of the final disk drive ends there. Unlike the other drives, you notice that the eject button on this one is extended. You push it, and a diskette pops out.
+
+The laptop you used to solve the puzzle on the CD is old, but not quite ancient enough to have a diskette drive in addition to its CD drive. You briefly consider attempting to hook up one of the old drives on the desk to the laptop in order to read the diskette, but as you’re reaching for the most intact one, you notice something odd about the diskette: its internal film roll has been torn in multiple places.
+
+You turn the diskette around in your hand and discover to your great surprise that it’s also missing the metal disc that should be in the centre of the ruined tape. In place of this you see an SD card, held in position with translucent tape.
+
+Fortunately the laptop has an SD card reader, which you quickly insert the card into. The card contains two executables and a few small text files which appear to be encrypted. None of them have particularly descriptive filenames. And of course, running the executables only leaves you more confused.
+
+You’re starting to wonder why such an urgent message would be hidden like this.

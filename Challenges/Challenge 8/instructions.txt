@@ -1,0 +1,5 @@
+You’ve been in the dungeon for hours, listening for outside activity, but hearing nothing, and playing Minesweeper, but losing every time. You must be in a very remote part of the Order’s complex to not even hear the swishing of robes or the deep humming of nursery rhymes. You’re starting to get hungry, and it’s dulling your Minesweeper skills. Morbidly, you wonder if their plan is to leave you to starve.
+
+Having nothing better to do, you take another look at the strange kiosk set into the dungeon’s wall, seemingly left there by whatever strange forces you encountered in the white void. As you’ve previously discovered, the kiosk has no internet connection, and runs nothing more than a standard build of Windows XP, but with the USB drivers removed. You consider starting a game of Solitaire when you notice a folder in the lower right corner of the desktop named “escape”.
+
+Inside the folder you find an audio file and zipped folder – another challenge. Hopefully you’ll fare better on this than you did with Minesweeper.

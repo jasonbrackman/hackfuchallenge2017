@@ -1,0 +1,81 @@
+“The most merciful thing in the world, I think, is the inability of the human mind to correlate all its
+ contents. We live on a placid island of ignorance in the midst of black seas of infinity, and it was not
+  meant that we should voyage far. The sciences, each straining in its own direction, have hitherto harmed
+  us little; but some day the piecing together of dissociated knowledge will open up such terrifying vistas
+  of reality, and of our frightful position therein, that we shall either go mad from the revelation or
+  flee from the deadly light into the peace and safety of a new dark age.”
+– HP Lovecraft, The Call of Cthulhu
+
+You shouldn’t be here.
+
+But you couldn’t stay away. Strange lights in the night, reports of crop circles and abductions, the sudden arrival of men in black and the chainlink quarantine around the town’s only soccer field – all the usual symptoms, singularly concentrated.
+
+Your hands shake as you continue to fiddle with your lockpick. The padlock keeping the door of this governmental metal container shut should not be this difficult to pick – but you’re nervous.
+
+A noise startles you, and you shoot a glance over your shoulder. It’s nothing – just the whimpering of the guard dog you tranqed, probably having a nightmare. Uncharacteristic of the MIBs not to leave any human guards, you muse. But then, it’s a cold and windy Sunday night.
+
+You cut the power to the impromptu facility on Friday, and so you’re confident that the alarm batteries have run down by now and won’t be alerting anyone to your visit. Still, there’s a kernel of doubt in your mind that’s expecting a loud siren to go off any minute now.
+
+Eventually, you click the final tumbler into place and the padlock comes off in your hand. You secret it in a coat pocket before slowly, carefully pushing open the metal door. You can feel your heart thumping against your ribcage. You’re on the brink of a massive discovery.
+
+As you poke your head around the partly open door, you hear a click. The container fills with light.
+
+In the centre of the room, a figure sits on a camping chair. You can’t see their face, but you can see that they’re holding a gun, and it’s pointed straight at you.
+
+BANG!
+
+You slam the door of the container and run from it, faster than you ever have before. Seconds later, you’re slumped in the driver’s seat of your car (parked around the corner) and wondering how you managed to scale a seven foot wire fence without even being cognisant of it.
+
+Once your heartrate returns to an ordinary level, you start the car and drive back home. Another evening, another failed expedition, another obstacle between you and the truth you know is out there.
+
+~§~
+
+Your dingy low-rent apartment screams “conspiracy theorist”. Not a patch of bare wall is visible behind a collage of old newspapers, coffee-stained typewriter manuscripts and faded faxes – if asked, you wouldn’t be able to say what colour the walls are painted.
+
+You could, however, launch into a long and detailed explanation of the significance of the different colours of drawing pins sticking out of the papers and the strings that link them together. Grey for the Greys, red for Roswell, yellow for Yog-Sothoth and so on. Taking a seat on your bed – the only surface free from highly classified truth bombs – you run over some of these theories in your head in a vain attempt to cheer yourself up.
+
+The discovery you were about to make this evening was going to blow the case on government coverups of alien invasion wide open, and that they had armed personnel waiting for you just proves it. Frustrated, you grab your pillow and throw it against the corner of the wall detailing chemtrails.
+
+The pillow slumps onto the floor without disturbing the link between the Dyatlov Pass Incident and MKULTRA. As it does so, you hear a high-pitched beep to your immediate right. You turn your head and see an LED display reading 05:35. That’s not the current time.
+
+Your pillow was hiding a bomb.
+
+=======================
+HACKFU CHALLENGE - 2017
+=======================
+
+Welcome to the HackFu Challenge for 2017. You are about to embark on a mysterious quest in which you will
+use your hackery skills to overcome a variety of complex challenges and determine the fate of the world!
+
+The various encrypted files in these challenges are locked using AES-256-CBC and base64 encoding. You can
+decrypt them using openssl.
+
+Once you unlock Challenges.zip.enc, you will find ten challenge folders. Each folder contains an instructions file, the files necessary for the challenge, and an encrypted solution file. The challenges range from simple logic problems to complex technical puzzles. You can do the challenges in any order you like, but the story makes much more sense in order of the challenges!
+
+Solving each challenge will give you a passphrase, in the format hackfu[a-z]+ (sometime passphrases may include uppercase letters -- you should convert these to lowercase), which can be used to decrypt the solution.txt file for that challenge. In addition to the second part of the story, this file will give you a challenge codename, a unique UPPERCASE THREE-WORD PHRASE, which can then be submitted on the challenge website (https://covertcorrespondent2017.mwrinfosecurity.com/submit), along with the email address you used to register and a detailed description of how you solved the challenge (very important!). Each submission will improve your standing on the Hackfu Challenges leaderboard, and increase your chance to win fabulous prizes!
+
+Just as a quick exercise, the rest of the introduction -- including instructions on how to register for the challenge -- is encrypted in the block below. The passphrase is (without the quotes): "hackfuchallenge2017". All the passphrases you encounter will start with "hackfu". Before attempting to decrypt the solution files for each challenge, convert all passphrases to lower case, with no punctuation and no spaces.
+
+U2FsdGVkX18FUHPUzSqob7oVy4r6Pv8O04HICtRY4niPtIzTMWZ6gF726eMb2hTZ
+ePA5RruIbsNbvQo060+F374+pRiNsm7qWSV3KxV3+ctC+z41n5DsB8zkHHLCTWs3
+k2wqxD786phWwrprxQBfyNoRxmcXzOZoFMWB774/JlVmp9xVTOZ9VjpNNDvRVQcf
+cOjwfS2+clzU4O8561ahNrmBpCKJcijKa6k/PeQzHION9wiPDIKLa6faVmloXkYk
+TYMO3vGClKqMQHYagDPqPbgoxknsiy82xTZJbnNnbSBePZPoHmw1O/rOSb0kXPcV
+7sFkIy9Lv9hlJb826uZdOHi5178R5nACi4Zkxp9X1Ph+GRd0jB31vYWPuGaBuhdw
+/Gbe+Pm7BMhp0BuhYkrZstfEOY7n0VJ8NkFAY0l+A3+lBglF1ZG135V6Vw32SWJl
+2ecobUth1MNWc/rh2vo+pkfRqPItiKM6feVzk+eYbF9wCfHYd+Jy+EzLuRFloIUq
+sA4B7PFyIVOGIL5VLmuDEsN8M+JoImlwdS4nAPgWe1Fj7FDFf8hc+rGFO+uThhZl
+a2hwjX9UlHf2OlNtNx7VjhE50MBr9X8u2+0BoJl/W1ftR0kelTmjUJRGOKCoRzZ8
+HzL7i6Aut6rjzsPC3Dm6pKl6ekTAHu7Z9NiQzZmwW+n/hmMrWdp7mSdEZ5UvqwNR
+rTFXsTv2PcfVck4XKxXtFhcAxhoJYUzlVc2HORaahoa/5P9/VfErQ1KkAPviF41w
+ipFh08xer2XB0iLFaVQmhgLsmZF94+UbqYhiQHyEyJKMLHSeydIDrAI7fgypo4kw
+cNAyIlrQKW7ksc4ZRFtpetdUAfutj7x/c1sEx1TDoTKR9dtj1s1BHGKsa4z7jH2H
+edlgI+FPYqSg0Gc4BbTItKR8x/7C+5Yv2xKWTGMDVBcIW8Ycz/u0H15RnG+e05L8
+Xjm0rXdD0LstusCN2nv6kBiYJz5zirwK/7Kyu6H95jX9JsYMtcxBKLBmuTXiaV6N
+GPZmcaad4FkKPqCdInM46glU4x8DjoySs/3BluAL+sNkHphEJ9SPy1OwZ0LOWUFH
+mxbEh5bdIidLw2HSQLLgWWhLYsfDEL5tRcjtS/Y63efglNwRiolQP4sFEgmPO1PU
+TkjEj1WtdqcmwZQIo9InkNAR+lTbdZ/ty4poxckbtqKaIbeXNjdHvLs6H+Yeh02p
+QIj3aqlZr/SNAA+5O9cknzzRUfKgdrM7a3IHuR6NaE7RLgzPCcLwuSErhEZKFrta
+4FxGJNFVcqQD4Y/Se+QfqtsYhScFVCwyIMiFwEC35vSmsCkKw19AmWiazdzB7a50
+jq4bmKj9F5X4HyRhplWV1SgpaotvCW6Me5OGwq6A0Akce021rB6R0tygH2apEHtm
+oSaiWfQVHgHLCaZE4dUDTBtns8HvQYHsAEyQigEeli4=
