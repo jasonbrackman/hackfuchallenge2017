@@ -50,11 +50,25 @@ use your hackery skills to overcome a variety of complex challenges and determin
 The various encrypted files in these challenges are locked using AES-256-CBC and base64 encoding. You can
 decrypt them using openssl.
 
-Once you unlock Challenges.zip.enc, you will find ten challenge folders. Each folder contains an instructions file, the files necessary for the challenge, and an encrypted solution file. The challenges range from simple logic problems to complex technical puzzles. You can do the challenges in any order you like, but the story makes much more sense in order of the challenges!
+Once you unlock Challenges.zip.enc, you will find ten challenge folders. Each folder contains an instructions
+file, the files necessary for the challenge, and an encrypted solution file. The challenges range from simple
+logic problems to complex technical puzzles. You can do the challenges in any order you like, but the story
+makes much more sense in order of the challenges!
 
-Solving each challenge will give you a passphrase, in the format hackfu[a-z]+ (sometime passphrases may include uppercase letters -- you should convert these to lowercase), which can be used to decrypt the solution.txt file for that challenge. In addition to the second part of the story, this file will give you a challenge codename, a unique UPPERCASE THREE-WORD PHRASE, which can then be submitted on the challenge website (https://covertcorrespondent2017.mwrinfosecurity.com/submit), along with the email address you used to register and a detailed description of how you solved the challenge (very important!). Each submission will improve your standing on the Hackfu Challenges leaderboard, and increase your chance to win fabulous prizes!
+Solving each challenge will give you a passphrase, in the format hackfu[a-z]+ (sometime passphrases may
+include uppercase letters -- you should convert these to lowercase), which can be used to decrypt the
+solution.txt file for that challenge. In addition to the second part of the story, this file will give you a
+challenge codename, a unique UPPERCASE THREE-WORD PHRASE, which can then be submitted on the challenge
+website (https://covertcorrespondent2017.mwrinfosecurity.com/submit), along with the email address you used
+to register and a detailed description of how you solved the challenge (very important!).
 
-Just as a quick exercise, the rest of the introduction -- including instructions on how to register for the challenge -- is encrypted in the block below. The passphrase is (without the quotes): "hackfuchallenge2017". All the passphrases you encounter will start with "hackfu". Before attempting to decrypt the solution files for each challenge, convert all passphrases to lower case, with no punctuation and no spaces.
+Each submission will improve your standing on the Hackfu Challenges leaderboard, and increase your chance to
+win fabulous prizes!
+
+Just as a quick exercise, the rest of the introduction -- including instructions on how to register for the
+challenge -- is encrypted in the block below. The passphrase is (without the quotes): "hackfuchallenge2017".
+All the passphrases you encounter will start with "hackfu". Before attempting to decrypt the solution files
+for each challenge, convert all passphrases to lower case, with no punctuation and no spaces.
 
 U2FsdGVkX18FUHPUzSqob7oVy4r6Pv8O04HICtRY4niPtIzTMWZ6gF726eMb2hTZ
 ePA5RruIbsNbvQo060+F374+pRiNsm7qWSV3KxV3+ctC+z41n5DsB8zkHHLCTWs3

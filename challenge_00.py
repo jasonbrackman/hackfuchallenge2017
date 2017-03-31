@@ -1,3 +1,5 @@
+import os
+import platform
 import binascii
 from subprocess import Popen, PIPE
 
@@ -29,8 +31,13 @@ message = binascii.a2b_base64(message)
 
 
 def decrypt_openssl(infile=None, outfile=None, passphrase=None):
-
     cmd = 'openssl enc -d -base64 -aes-256-cbc -salt'.split()
+    plt = platform.platform()
+    if plt.startswith('Windows'):
+        cmd = 'c:\\openssl\\bin\\openssl enc -d -base64 -aes-256-cbc -salt'.split()
+
+
+
 
     if infile:
         cmd += ['-in', infile]
@@ -39,7 +46,7 @@ def decrypt_openssl(infile=None, outfile=None, passphrase=None):
         cmd += ['-out', outfile]
 
     cmd += ['-k', passphrase]
-
+    print(cmd)
     p = Popen(cmd, stdin=PIPE, stdout=PIPE, stderr=PIPE)
     out, err = p.communicate()
 
@@ -47,12 +54,13 @@ def decrypt_openssl(infile=None, outfile=None, passphrase=None):
 
 if __name__ == "__main__":
     key = 'hackfuchallenge2017'
-    filein = 'challenge_00/00.aes'
+    filein = os.path.abspath('./challenges/challenge_00/00.aes')
     result = decrypt_openssl(infile=filein, passphrase=key)
+    print(result)
     for line in result[0].decode().split('\n'):
         print(line)
 
-    decrypt_openssl(infile='challenge_00/Challenges.zip.enc', outfile='challenge_00/Challenges.zip', passphrase=key)
+   # decrypt_openssl(infile='challenge_00/Challenges.zip.enc', outfile='challenge_00/Challenges.zip', passphrase=key)
     # decoding the contents reveals:
     # Ah, good, at least we know you can decrypt stuff.
     #
