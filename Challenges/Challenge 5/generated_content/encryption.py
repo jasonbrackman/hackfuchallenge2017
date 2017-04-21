@@ -5,8 +5,12 @@ This file requires: python-crypto, python-dev
 
 '''
 
-from Crypto.Cipher import AES
-from Crypto import Random
+try:
+    from Crypto.Cipher import AES
+    from Crypto import Random
+except ImportError:
+    from Cryptodome.Cipher import AES
+    from Cryptodome import Random
 import base64
 import argparse
 import sys
@@ -33,8 +37,8 @@ def decrypt(filename, key):
     cipher_text = cipher.decrypt(cipher_text[AES.block_size:])
     cipher_text = cipher_text[:-ord(cipher_text[len(cipher_text) - 1:])]
     print(cipher_text)
-    with open(filename + '.dec', 'wb') as f:
-        f.write(cipher_text)
+    with open(filename + '.dec', 'w') as f:
+        f.write(cipher_text.decode())
     print('Decryption complete. Check {}.dec for output.'.format(filename))
 
 
@@ -52,10 +56,11 @@ def check_key_length(key):
 
 
 if __name__ == '__main__':
-    test = 'Angle Arithmetic'
+    # test = 'Angle Arithmetic'
     # test = 'Acutes'
     # test = 'Alphabet'
-    sys.argv = ['', '-f', 'arr.txt.enc', '-k', test, '-d']
+    test = 'wejustfireinside'
+    sys.argv = ['', '-f', 'bee.txt.enc', '-k', test, '-d']
     desc = '''
     Encrypt or decrypt files.
     '''
