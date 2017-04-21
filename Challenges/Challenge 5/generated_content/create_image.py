@@ -6,40 +6,60 @@
 
 from PIL import Image
 
-def get_pixels():
+
+def get_pixels(file):
     # pixels = list()
 
-    with open('arr.txt.enc.dec', 'r') as handle:
-        r = handle.read().strip().split(' ')
-        print(len(r))
-        # return [int(item) for item in r]
+    with open(file, 'r') as handle:
+        lines = handle.readlines()
+        width = len(lines)
+        height = len(lines[5])
 
-    with open('bee.txt.enc.dec', 'r') as handle:
-        b = handle.read().strip().split(' ')
-        print(len(b))
+        handle.seek(0)
 
-    with open('gee.txt.enc.dec', 'r') as handle:
-        g = handle.read().strip().split(' ')
-        print(len(g))
+        pixels = handle.read().strip().split(' ')
+        pixels = [int(item) for item in pixels]
 
-    for c1, c2, c3 in zip(r,g,b):
-        pixels.append((int(c1), int(c2), int(c1)))
+    print(width)
+    print(height)
+    return pixels, width, height
 
-    return pixels
+    #
+    # with open('arr.txt.enc.dec', 'r') as handle:
+    #     r = handle.read().strip().split(' ')
+    #     print(len(r))
+    #     # return [int(item) for item in r]
+    #
+    # with open('bee.txt.enc.dec', 'r') as handle:
+    #     b = handle.read().strip().split(' ')
+    #     print(len(b))
+    #
+    # with open('gee.txt.enc.dec', 'r') as handle:
+    #     g = handle.read().strip().split(' ')
+    #     print(len(g))
+    #
+    # for c1, c2, c3 in zip(r,g,b):
+    #     pixels.append((int(c1), int(c2), int(c1)))
+    #
+    # return pixels
 
 
-def create_image(pixels, width, height):
+def create_image(file, width, height):
     temp_im = Image.new('L', (width, height))
-    temp_im.putdata(pixels)
-    temp_im.save('b_image.jpg')
+
+    with open(file, 'r') as handle:
+        lines = handle.readlines()
+
+        for row, pixels in enumerate(lines):
+            pixels = pixels.strip().split(' ')
+            for col, item in enumerate(pixels):
+                temp_im.putpixel((row, col), int(item))
+
+    temp_im.save('01_image.jpg')
 
 if __name__ == "__main__":
-    pixels = get_pixels()
-
-    # for
-    d1 = 35
-    d2 = 99
-    create_image(pixels, d1, d2)
+    #pixels, width, height = get_pixels('gee.txt.enc.dec')
+    create_image('01.txt.enc.dec', 150, 100)
 
     # for pixel in pixels:
     #     print(len(pixel))
