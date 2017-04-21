@@ -31,14 +31,15 @@ def encrypt(filename, key):
 def decrypt(filename, key):
     with open(filename, 'r') as f:
         cipher_text = f.read().rstrip()
+        # cipher_text = cipher_text[0:-2]
     cipher_text = base64.b64decode(cipher_text)
     iv = cipher_text[:AES.block_size]
     cipher = AES.new(key, AES.MODE_CBC, iv)
     cipher_text = cipher.decrypt(cipher_text[AES.block_size:])
     cipher_text = cipher_text[:-ord(cipher_text[len(cipher_text) - 1:])]
     print(cipher_text)
-    with open(filename + '.dec', 'w') as f:
-        f.write(cipher_text.decode())
+    with open(filename + '.dec', 'wb') as f:
+        f.write(cipher_text)
     print('Decryption complete. Check {}.dec for output.'.format(filename))
 
 
@@ -56,11 +57,8 @@ def check_key_length(key):
 
 
 if __name__ == '__main__':
-    # test = 'Angle Arithmetic'
-    # test = 'Acutes'
-    # test = 'Alphabet'
     test = 'wejustfireinside'
-    sys.argv = ['', '-f', 'bee.txt.enc', '-k', test, '-d']
+    sys.argv = ['', '-f', '08.txt.enc', '-k', test, '-d']
     desc = '''
     Encrypt or decrypt files.
     '''
