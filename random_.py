@@ -1,4 +1,5 @@
 # https://www.reddit.com/r/codes/comments/62rl1a/good_luck/
+import hashlib
 import collections
 
 import math
@@ -49,6 +50,32 @@ def get_standard_deviation():
     return standard_deviation
 
 
+
 if __name__ == "__main__":
-    reddit_thing()
+    # reddit_thing()
+    # items = ['cypher', 'decipher', 'question', 'password', 'domoarigatomrroboto',
+    #          'kilroy', 'kilroywashere', 'roboto', 'escape', 'clue',
+    #          'himitsuwoshiritai', 'mataahoohimade', 'thankyouverymuchmrroboto',
+    #          'imkilroykilroykilroykilroy']
+
+    files = ['words.txt', 'words2.txt', 'words3.txt']
+    for f in files:
+        with open(r'.\challenges\challenge 8\generated_content\{}'.format(f), 'rt') as handle:
+            words = handle.readlines()
+            for word in words:
+                result = hashlib.md5(word.encode()).hexdigest()
+
+                unknown_01 = '286755fad04869ca523320acce0dc6a4'
+                if result == unknown_01:
+                    print("[MATCH] {} = {}".format(word.strip(), unknown_01))
+
+                unknown_02 = '047b704a141707ec15a8171ab1d37dbd'
+                if result == unknown_02:
+                    print("[MATCH] {} = {}".format(word.strip(), unknown_02))
+
+
+
+    print(hashlib.md5('domoarigatomrroboto\n'.encode()).hexdigest())
+
+
     #get_standard_deviation()
