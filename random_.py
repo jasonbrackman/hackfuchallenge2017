@@ -3,6 +3,9 @@ import hashlib
 import collections
 
 import math
+import os
+
+import subprocess
 
 code = '1171429351229372322293627322717233535293117293519193315111334393725393312272931193334373229393722243'
 letters = [code[index:index+2] for index in range(0, len(code), 2)]
@@ -49,15 +52,67 @@ def get_standard_deviation():
 
     return standard_deviation
 
+def crack_zip():
+    # passwords = (generate_password(['Did', ' ', 'The', 'Moon', 'Landing', 'Really', 'Happen', '?!?'])
+    #              for x in range(100000))
 
+    passwords = ['DidTheMoonLandingReallyHappen?!?',  # this is the correct length for an 256bit key
+                 'DidTheMoonLandingReallyHappen?',
+                 'didthemoonlandingreallyhappen?!',
+                 'didthemoonlandingreallyhappen?',
+                 'Did The Moon Landing Really Happen?!?',
+                 'Did The Moon Landing Really Happen ? ! ?',
+                 'DIDTHEMOONLANDINGREALLYHAPPEN',
+                 'DID THE MOON LANDING REALLY HAPPEN',
+                 "dtmlrh",
+                 'yes', 'YES', 'y', 'Yes', 'Y',
+                 'no', 'NO', 'No', 'n', 'N',
+                 'AldrinApollo11', 'pass3', 'hackfu', 'moon', 'tunnel', '',
+                 'pass3', r'pass3/password', r'pass3\password', 'password', 'buzz',
+                 'believe', '2700', '1969', '386',
+                 'Fact', 'Fiction', 'fact', 'fiction', 'FACT', 'FICTION',
+                 'lies', 'Lies', 'LIES',
+                 'Fake', 'FAKE', 'fake', 'u4j']
 
-if __name__ == "__main__":
-    # reddit_thing()
-    # items = ['cypher', 'decipher', 'question', 'password', 'domoarigatomrroboto',
-    #          'kilroy', 'kilroywashere', 'roboto', 'escape', 'clue',
-    #          'himitsuwoshiritai', 'mataahoohimade', 'thankyouverymuchmrroboto',
-    #          'imkilroykilroykilroykilroy']
+    # passwords = [str(nums) for nums in range(99, 1000, 1)] <-- :(
+    # passwords = (''.join(i) for i in itertools.product('DidTheMoonLandingReallyHappen?!?', repeat=32))
+    # passwords = (''.join(i) for i in itertools.product(['Did', 'The', 'Moon', 'Landing', 'Really', 'Happen', '?!?'],
+    #                                                    repeat=7))
+    for index, password in enumerate(passwords):
+        # password = base64.b64encode(password.encode())
+        cmd = [r'/Users/jasonbrackman/Downloads/unar1.10.1/unar',
+               '-f', '-p', password,  os.path.abspath(r'./Challenges/Challenge 1/generated_content/aldrinapollo11.zip')]
 
+        # print(' '.join(cmd))
+        proc = subprocess.Popen(cmd, stderr=subprocess.PIPE, stdout=subprocess.PIPE)
+        stderr, stdout = proc.communicate()
+        print(stderr.decode())
+        # print(password)
+        response = 'FAIL' if b'fail' in stderr else 'PASS'
+        if 'PASS' in response:
+            print(index, '[{}] attempt with: {}'.format(response, password))
+            break
+
+def unzip(input_01, password):
+    cmd = [r'/Users/jasonbrackman/Downloads/unar1.10.1/unar',
+           '-f',
+           '-p', password,
+           input_01]
+
+    if os.name == 'nt':
+        cmd = [r'C:\Program Files\7-Zip\7z.exe',    # program
+               'x',                                 # extract
+               '-p{}'.format(password),             # password
+               '-y',                                # auto-yes to everything
+               input_01]                            # zipped file
+
+    proc = subprocess.Popen(cmd, stderr=subprocess.PIPE, stdout=subprocess.PIPE)
+    stderr, stdout = proc.communicate()
+    # print(stderr.decode())
+    # print(stdout.decode())
+    return stdout
+
+def test_hashes():
     files = ['words.txt', 'words2.txt', 'words3.txt']
     for f in files:
         with open(r'.\challenges\challenge 8\generated_content\{}'.format(f), 'rt') as handle:
@@ -73,9 +128,28 @@ if __name__ == "__main__":
                 if result == unknown_02:
                     print("[MATCH] {} = {}".format(word.strip(), unknown_02))
 
-
-
     print(hashlib.md5('domoarigatomrroboto\n'.encode()).hexdigest())
 
 
-    #get_standard_deviation()
+if __name__ == "__main__":
+    # reddit_thing()
+    # get_standard_deviation()
+
+    items = ['cypher', 'decipher', 'question', 'password', 'domoarigatomrroboto',
+             'kilroy', 'kilroywashere', 'roboto', 'escape', 'clue',
+             'himitsuwoshiritai', 'mataahoohimade', 'thankyouverymuchmrroboto',
+             'imkilroykilroykilroykilroy', 'hellomoto']
+
+    input_01 = os.path.abspath('./challenges/challenge 8/generated_content/password.7z')
+
+    for f in ['words.txt', 'words2.txt', 'words3.txt']:
+        with open(r'.\challenges\challenge 8\generated_content\{}'.format(f), 'rt') as items:
+
+            for password in items:
+                password = hashlib.md5(password.encode()).hexdigest()
+                result = unzip(input_01, password)
+                response = 'FAIL' if b'fail' in result or b'Wrong password?' in result else 'PASS'
+                if 'PASS' in response:
+                    print('[{}] attempt with: {}'.format(response, password))
+
+
