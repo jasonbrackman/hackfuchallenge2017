@@ -93,7 +93,10 @@ def crack_zip():
             print(index, '[{}] attempt with: {}'.format(response, password))
             break
 
-def unzip(input_01, password):
+def unzip(input_01, password, hash=False):
+    if hash:
+        password = hashlib.md5(password.encode()).hexdigest()
+
     cmd = [r'/Users/jasonbrackman/Downloads/unar1.10.1/unar',
            '-f',
            '-p', password,
@@ -135,21 +138,64 @@ if __name__ == "__main__":
     # reddit_thing()
     # get_standard_deviation()
 
-    items = ['cypher', 'decipher', 'question', 'password', 'domoarigatomrroboto',
+    items = ['cypher', 'decipher', 'question',
+             'domoarigatomrroboto', 'hellomoto', 'password'
              'kilroy', 'kilroywashere', 'roboto', 'escape', 'clue',
              'himitsuwoshiritai', 'mataahoohimade', 'thankyouverymuchmrroboto',
-             'imkilroykilroykilroykilroy', 'hellomoto']
+             'imkilroykilroykilroykilroy', 'android', 'mrroboto', 'modren',
+             "Domo arigato misuta Robotto",
+             "Mata au hi made",
+             "Domo arigato misuta Robotto",
+             "Himitsu wo shiritai",
+             "You're wondering who I am-machine or mannequin",
+             "With parts made in Japan, I am the modern man",
+             "I've got a secret I've been hiding under my skin",
+             "My heart is human, my blood is boiling, my brain I.B.M.",
+             "So if you see me acting strangely, don't be surprised",
+             "I'm just a man who needed someone, and somewhere to hide",
+             "To keep me alive, just keep me alive",
+             "Somewhere to hide to keep me alive",
+             "I'm not a robot without emotions, I'm not what you see",
+             "I've come to help you with your problems, so we can be free",
+             "I'm not a hero, I'm not a savior, forget what you know",
+             "I'm just a man whose circumstances went beyond his control",
+             "Beyond my control, we all need control",
+             "I need control, we all need control",
+
+             "I am the modern man, who hides behind a mask",
+             "So no one else can see my true identity",
+
+             "Domo arigato, Mr. Roboto, domo, domo",
+             "Domo arigato, Mr. Roboto",
+
+             "Thank you very much, Mr. Roboto",
+             "For doing the jobs nobody wants to",
+             "And thank you very much, Mr. Roboto",
+             "For helping me escape to where I needed to",
+             "Thank you, thank you, thank you",
+             "I want to thank you, please, thank you, oh yeah",
+
+             "The problem's plain to see, too much technology",
+             "Machines to save our lives. Machines dehumanize.",
+
+             "The time has come at last",
+             "To throw away this mask",
+             "Now everyone can see",
+             "My true identity",
+             "I'm Kilroy! Kilroy! Kilroy! Kilroy!"]
 
     input_01 = os.path.abspath('./challenges/challenge 8/generated_content/password.7z')
 
-    for f in ['words.txt', 'words2.txt', 'words3.txt']:
-        with open(r'.\challenges\challenge 8\generated_content\{}'.format(f), 'rt') as items:
+    # items = []
+    # for f in ['words.txt', 'words2.txt', 'words3.txt']:
+    #     with open(r'.\challenges\challenge 8\generated_content\{}'.format(f), 'rt') as handle:
+    #         items += handle.readlines()
 
-            for password in items:
-                password = hashlib.md5(password.encode()).hexdigest()
-                result = unzip(input_01, password)
-                response = 'FAIL' if b'fail' in result or b'Wrong password?' in result else 'PASS'
-                if 'PASS' in response:
-                    print('[{}] attempt with: {}'.format(response, password))
+    for password in items:
+        password = password.lower().replace(" ", '').replace("'", '').replace('-', '').replace(',', '').replace('.', '').replace('!', '')
+        result = unzip(input_01, password, hash=False)
+        response = 'FAIL' if b'fail' in result or b'Wrong password?' in result else 'PASS'
+        # if 'PASS' in response:
+        print('[{}] attempt with: {}'.format(response, password))
 
 
