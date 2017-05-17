@@ -1,0 +1,21 @@
+qwavheaderdump -F 047b704a141707ec15a8171ab1d37dbd.wav
+047b704a141707ec15a8171ab1d37dbd.wav (970476 bytes):
+	riff: 'RIFF'
+	riff length: 970468
+	wave: 'WAVE'
+	fmt: 'fmt '
+	fmt length: 20
+		fmt length field should be 16
+		fixed
+	format: 1
+	channels: 2
+	sample rate: 22050
+	bytes/second: 88200
+	bytes/sample: 4
+	bits/sample: 16
+	data: ''
+		data field should be 'data'
+		fixed
+	data length: 1635017060
+		data length field should be 970432
+		fixed
