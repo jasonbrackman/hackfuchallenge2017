@@ -1,3 +1,21 @@
+escape - folder
+password - 7z file
+hellomoto - wav file
+domoarigatomrroboto - qr code
+
+- password attempts using any of the names (md5 hashed or plain text) do not open the file.
+
+- md5 is used to hash the names of the wav and 7z file.
+- 7z is 7kb indicating more than simple text file being stored.
+- wav header is not normal according to the qwavheaderdump - specifically fmt length
+- Left / Right channels are identical in terms of information (seems odd)
+- QR code is noisy (maybe something in the noise?)
+- Steghide does not work on the wav file unless header is fixed to a standard structure --
+  and then this doesn't mean that steghide was used.
+- this wav file appears to store its data in 16bit chunks, lsb of those chunks does not appear
+  to reveal anything significant.
+
+
 qwavheaderdump -F 047b704a141707ec15a8171ab1d37dbd.wav
 047b704a141707ec15a8171ab1d37dbd.wav (970476 bytes):
 	riff: 'RIFF'
