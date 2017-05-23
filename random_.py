@@ -1,4 +1,5 @@
 # https://www.reddit.com/r/codes/comments/62rl1a/good_luck/
+import base64
 import hashlib
 import collections
 
@@ -138,64 +139,79 @@ if __name__ == "__main__":
     # reddit_thing()
     # get_standard_deviation()
 
-    items = ['cypher', 'decipher', 'question',
-             'domoarigatomrroboto', 'hellomoto', 'password'
-             'kilroy', 'kilroywashere', 'roboto', 'escape', 'clue',
-             'himitsuwoshiritai', 'mataahoohimade', 'thankyouverymuchmrroboto',
-             'imkilroykilroykilroykilroy', 'android', 'mrroboto', 'modren',
-             "Domo arigato misuta Robotto",
-             "Mata au hi made",
-             "Domo arigato misuta Robotto",
-             "Himitsu wo shiritai",
-             "You're wondering who I am-machine or mannequin",
-             "With parts made in Japan, I am the modern man",
-             "I've got a secret I've been hiding under my skin",
-             "My heart is human, my blood is boiling, my brain I.B.M.",
-             "So if you see me acting strangely, don't be surprised",
-             "I'm just a man who needed someone, and somewhere to hide",
-             "To keep me alive, just keep me alive",
-             "Somewhere to hide to keep me alive",
-             "I'm not a robot without emotions, I'm not what you see",
-             "I've come to help you with your problems, so we can be free",
-             "I'm not a hero, I'm not a savior, forget what you know",
-             "I'm just a man whose circumstances went beyond his control",
-             "Beyond my control, we all need control",
-             "I need control, we all need control",
+    print(hashlib.md5('hellomoto\n'.encode()).hexdigest())
 
-             "I am the modern man, who hides behind a mask",
-             "So no one else can see my true identity",
+    domo = 0xc409227ae91cee2dba2cacae31dc1588
+    moto = 0x047b704a141707ec15a8171ab1d37dbd
+    pas_ = 0x286755fad04869ca523320acce0dc6a4
 
-             "Domo arigato, Mr. Roboto, domo, domo",
-             "Domo arigato, Mr. Roboto",
+    print(domo + moto)
 
-             "Thank you very much, Mr. Roboto",
-             "For doing the jobs nobody wants to",
-             "And thank you very much, Mr. Roboto",
-             "For helping me escape to where I needed to",
-             "Thank you, thank you, thank you",
-             "I want to thank you, please, thank you, oh yeah",
+    # items = ['cypher', 'decipher', 'question',
+    #          'domoarigatomrroboto', 'hellomoto', 'password'
+    #          'kilroy', 'kilroywashere', 'roboto', 'escape', 'clue',
+    #          'himitsuwoshiritai', 'mataahoohimade', 'thankyouverymuchmrroboto',
+    #          'imkilroykilroykilroykilroy', 'android', 'mrroboto', 'modren',
+    #          "Domo arigato misuta Robotto",
+    #          "Mata au hi made",
+    #          "Domo arigato misuta Robotto",
+    #          "Himitsu wo shiritai",
+    #          "You're wondering who I am-machine or mannequin",
+    #          "With parts made in Japan, I am the modern man",
+    #          "I've got a secret I've been hiding under my skin",
+    #          "My heart is human, my blood is boiling, my brain I.B.M.",
+    #          "So if you see me acting strangely, don't be surprised",
+    #          "I'm just a man who needed someone, and somewhere to hide",
+    #          "To keep me alive, just keep me alive",
+    #          "Somewhere to hide to keep me alive",
+    #          "I'm not a robot without emotions, I'm not what you see",
+    #          "I've come to help you with your problems, so we can be free",
+    #          "I'm not a hero, I'm not a savior, forget what you know",
+    #          "I'm just a man whose circumstances went beyond his control",
+    #          "Beyond my control, we all need control",
+    #          "I need control, we all need control",
+    #
+    #          "I am the modern man, who hides behind a mask",
+    #          "So no one else can see my true identity",
+    #
+    #          "Domo arigato, Mr. Roboto, domo, domo",
+    #          "Domo arigato, Mr. Roboto",
+    #
+    #          "Thank you very much, Mr. Roboto",
+    #          "For doing the jobs nobody wants to",
+    #          "And thank you very much, Mr. Roboto",
+    #          "For helping me escape to where I needed to",
+    #          "Thank you, thank you, thank you",
+    #          "I want to thank you, please, thank you, oh yeah",
+    #
+    #          "The problem's plain to see, too much technology",
+    #          "Machines to save our lives. Machines dehumanize.",
+    #
+    #          "The time has come at last",
+    #          "To throw away this mask",
+    #          "Now everyone can see",
+    #          "My true identity",
+    #          "I'm Kilroy! Kilroy! Kilroy! Kilroy!"]
+    #
+    # input_01 = os.path.abspath('./challenges/challenge 8/generated_content/password.7z')
+    #
+    # # items = []
+    # # for f in ['words.txt', 'words2.txt', 'words3.txt']:
+    # #     with open(r'.\challenges\challenge 8\generated_content\{}'.format(f), 'rt') as handle:
+    # #         items += handle.readlines()
+    #
+    # for password in items:
+    #     password = password.lower().replace(" ", '').replace("'", '').replace('-', '').replace(',', '').replace('.', '').replace('!', '')
+    #     result = unzip(input_01, password, hash=False)
+    #     response = 'FAIL' if b'fail' in result or b'Wrong password?' in result else 'PASS'
+    #     # if 'PASS' in response:
+    #     print('[{}] attempt with: {}'.format(response, password))
 
-             "The problem's plain to see, too much technology",
-             "Machines to save our lives. Machines dehumanize.",
 
-             "The time has come at last",
-             "To throw away this mask",
-             "Now everyone can see",
-             "My true identity",
-             "I'm Kilroy! Kilroy! Kilroy! Kilroy!"]
-
-    input_01 = os.path.abspath('./challenges/challenge 8/generated_content/password.7z')
-
-    # items = []
-    # for f in ['words.txt', 'words2.txt', 'words3.txt']:
-    #     with open(r'.\challenges\challenge 8\generated_content\{}'.format(f), 'rt') as handle:
-    #         items += handle.readlines()
-
-    for password in items:
-        password = password.lower().replace(" ", '').replace("'", '').replace('-', '').replace(',', '').replace('.', '').replace('!', '')
-        result = unzip(input_01, password, hash=False)
-        response = 'FAIL' if b'fail' in result or b'Wrong password?' in result else 'PASS'
-        # if 'PASS' in response:
-        print('[{}] attempt with: {}'.format(response, password))
+    print(base64.b64encode('1. Can you even split the line into a sensible three parts?'.encode()))
+    print(base64.b64encode('2. How many types of letters do you see?  How do the letters correspond to the cube?'.encode()))
 
 
+    print(base64.b64encode('3. Does it help if you know each center square – no matter if its rows/cols or cols/rows – still has to be the same?  Fill in those letters.'.encode()))
+
+    print(base64.b64encode('4. Select one of the colour sides you have completed – work out the coordinates – and how they work for those letters – then go through the rest of that colour – does that fill in enough of the gaps to understand the rest?'.encode()))
