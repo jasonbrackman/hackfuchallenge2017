@@ -1,0 +1,41 @@
+This challenge taught me humility and a hard lesson in double checking my work.
+
+The QR code hidden in the wave file was immediately found, but the 7z file didn't want to use it as a password.
+
+Twitter was already saying that #8 was difficult so I just assumed it was going to be more of a challenge.  I tried
+to solve this puzzle by attacking it with all the things I've done in other challenges:
+- examined the header,
+- used tools such as binwalk and strings
+- looked for LSB manually, tried to use steghide, etc.
+
+Nothing was showing up so I turned to the two names of the files.  Putting one of them into Google revealed it was an
+MD5 hash 'password' -- but I wasn't able to reproduce it until i added a '\n' at the end.  This was the first distractor
+that threw me.  The second MD5 was not googleable -- so I downloaded a password list and started generating MD5s --
+sure enough I had 'hellomoto' immediately.
+
+Two things happened at this time -- I started researching everythign to do with 'domoarigigatomrroboto' and I also ran
+the same wordlist on the 7z.  Unfortunately, I kept in my code with the '\n' -- after a full day of cracking -- it
+completed without a match, however; if I would have not added the '\n' it would have found 'domoarigato' in the word
+list.
+
+Since I believed I had tried the worldlist I felt somethign else must be going on -- and I spent hours learning about
+Styx, about Motorola - trying their default passwords for their phones -- MD5 hashing the crap out of everything related
+to the puzzle.  I started seeing things that were not there.
+
+I started getting random emails from people doing the puzzles at my work.  (I've celebrated some of the successes I had
+on twitter -- so I figure they got the email through there and matched my last name to the twitter account and my
+'BrackAttack' hackfu name.  One of them had already finished this puzzle -- and I was weak -- I told him all that I knew
+so far -- and he sent back a rot13 clue -- up to me to open it and I did -- it explained that I needed to retread my
+steps -- and I was overthinking all the other stuff.   So I reran my wordlist and the 7z opened.  Bittersweet.
+
+My lesson here is that I used a wordlist for the md5 -- it should have been a clue that the password from the same
+place likely used the same level of encryption.  And to measure twice and cut once kind of thing :).
+
+I spent 6 hours afterwards just in a daze -- not sure if I wanted to continue -- but I still had three days to finish.
+
+The clue was pretty straight forward -- and used PIL to add then take away colour to create a string of characters.
+I immediately saw the 'hackfu...' clue and the opposite side showed 'louratall' -- so I printed out all the letters
+on a piece of paper and then rewrote it again with all the RED squares diagonally lining up.
+
+This revealed the final key to puzzle #8:
+'hackfuthecolourintheoddbandsonthemeteorwasimpossibletodescribeonlybyanalogycoulditbecalledcolouratall'

@@ -1,15 +1,26 @@
-Once you’ve satisfied your hunger, you venture out of the kitchen and into the rest of the complex. You encounter no-one. Just as you suspected, the cultists have entirely vacated this place.
+Once you’ve satisfied your hunger, you venture out of the kitchen and into the rest of the complex. You
+encounter no-one. Just as you suspected, the cultists have entirely vacated this place.
 
-You find your way to the quarters of the yellow robed inner circle, and pick one room at random. The door is locked, and you don’t have any lockpicks or library cards on you. So you find a rock, and use that to make short work of the lock. If only the previous challenges you’ve faced had been as easy.
+You find your way to the quarters of the yellow robed inner circle, and pick one room at random. The
+door is locked, and you don’t have any lockpicks or library cards on you. So you find a rock, and use
+that to make short work of the lock. If only the previous challenges you’ve faced had been as easy.
 
-To your great disappointment, the Inner Circle practice much better operational security than most of the governmental and non-governmental facilities you’ve broken into over the course of your career. Three broken locks later, you haven’t turned up so much as a crumpled memo in a wastepaper bin.
+To your great disappointment, the Inner Circle practice much better operational security than most of
+the governmental and non-governmental facilities you’ve broken into over the course of your career.
+Three broken locks later, you haven’t turned up so much as a crumpled memo in a wastepaper bin.
 
-You’re searching a particularly spartan sleeping area when a dark shape under the bed catches you eye. You crouch down and retrieve it – a smartphone – one of the lower end Androids.
+You’re searching a particularly spartan sleeping area when a dark shape under the bed catches you eye.
+You crouch down and retrieve it – a smartphone – one of the lower end Androids.
 
-To your great delight, the phone doesn’t ask you for a pattern or a PIN. You unlock it an pore over its contents.
+To your great delight, the phone doesn’t ask you for a pattern or a PIN. You unlock it an pore over its
+contents.
 
-At first, your search doesn’t turn up very much. The call log shows a number of calls to and from unsaved numbers, and the only stored SMS is a single banking OTP notification. There are no saved notes, photographs or videos, and no messaging apps with conversation histories.
+At first, your search doesn’t turn up very much. The call log shows a number of calls to and from
+unsaved numbers, and the only stored SMS is a single banking OTP notification. There are no saved notes,
+photographs or videos, and no messaging apps with conversation histories.
 
-However, there is a strange app that you’ve never seen before. And rather than being a game or webview for some obscure website, it appears to be an obtuse method for securely storing information.
+However, there is a strange app that you’ve never seen before. And rather than being a game or webview
+for some obscure website, it appears to be an obtuse method for securely storing information.
 
-Mentally thanking the owner of the phone for their apparent aversion to passwords and encryption, you set to work.
+Mentally thanking the owner of the phone for their apparent aversion to passwords and encryption, you
+set to work.

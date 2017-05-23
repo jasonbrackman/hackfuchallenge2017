@@ -3,7 +3,7 @@
 # --------------------------------------------------------------------------------------
 
 from PIL import Image
-
+import os
 import challenge_00
 
 
@@ -64,10 +64,16 @@ def create_white_map_template(input_01, output_01, input_02):
     im.save('./challenges/challenge 7/generated_content/test.png')
     # im.show()
 
+def decrypt_message(passkey):
+    infile_ = os.path.abspath('./Challenges/Challenge 7/solution.txt.enc')
+    outfile_ = os.path.abspath('./Challenges/Challenge 7/generated_content/solution.txt')
+
+    challenge_00.decrypt_openssl(infile=infile_, outfile=outfile_, passphrase=passkey)
+
 if __name__ == "__main__":
     input_01 = './challenges/challenge 7/input1.png'
     output_01 = './challenges/challenge 7/output1.png'
     a = './challenges/challenge 7/input2.png'
     # create_white_map_template(input_01, output_01, a)
-    passkey='hackfuwearehonouredtohavewithusarevolutionaryofadifferentcalibre'
-    print(challenge_00.decrypt_openssl(passphrase=passkey))
+    passkey = 'hackfuwearehonouredtohavewithusarevolutionaryofadifferentcalibre'
+    decrypt_message(passkey)

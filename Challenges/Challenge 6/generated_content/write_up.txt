@@ -1,0 +1,40 @@
+Opening the new challenge in my now trusty hex editor revealed a header I had never seen before: 'elf'.
+
+A quick google search revealed it was a Linux based file and that I was not going to have any luck opening this
+executable on my PC or Mac.  I still looked through the hex codes of both files and did see something repeated in one
+of the files: Phantom-Key repeated over and over.
+
+I had a strong inclination that I would need to install Linux.  In an effort to avoid this I went down a path of
+trying to research a company called Phantom-Key that is involved with a USB key logging service.  The name Phantom-Key
+was repeated in the second file over and over in different odd ways.  But nothing was revealing itself of value. At
+some point I decided to bite the bullet.  I installed VirtualBox and downloaded the Kali Linux distribution.
+
+Quick sad fact: I have never used Linux before.  It took me hours to figure out to chmod +x the file and
+then to start it by typing in './' before typing in the name of the executable.  I was really worried that I was biting
+off more than I could manage.  The best thing though was that I downloaded the Kali Linux install -- it came with
+several programs and one that would ultimately help me solve the challenge: 'edb debugger'.
+
+I ran the program and took my time to read through the asm.  I focused on the create_decrypt_key func.  I even printed
+it out and wen through it line by line.  Again the 'phantom-key' revealed itself - but this was not what I needed to
+rename the secondary file too.  I printed out the asm and actually went through each line figuring out what it did. I
+felt more confident in what was going on and went back to the debugger.  My confidence was a lot stronger with the tool
+this time around and sure enough 'phantom_bits' was right there in the stack frame.
+
+I immediately renamed the secondary file and reran the 'Decryptor' - SUCCESS!  But now a second problem was introduced.
+
+Prior to really getting the 'phantom_bits' I kept circling the text that was output.  I cringed a bit on the
+'Dyanetic Decryptor' title and L. Ron Hubbard's name hidden in hex.  I discussed it with my wife and explaining it away
+as likely a connection to aliens, which is the theme of this years' HackFu challenges, instead of some twisty way of
+introducing Scientology to all the players.  This focus became instantly important after opening the second part of
+the challenge.  I needed to set the date to the 'messiah's' death, which was obviously L. Ron Hubbard. I googled the
+answer and set the Linux date to the Jan 24th, 1986.  Ran the phantom_bits executable -- but it didn't work.  The
+date kept switching back to current time.  I got lucky here and simply set my Mac (hosting the VirtualBox) time to
+the death date and that worked.
+
+Revealing: hackfusummonthedemonatyourperilitisnotintelligentactuallyitsferal
+
+BrackAttack
+
+PS: Last message I had mentioned that it would likely be my last -- but I didn't realize I had another month to
+complete the challenges! :)
+

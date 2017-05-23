@@ -22,7 +22,7 @@ def convert_hex(hex_values):
 
 
 # first two inputs
-# - important part here for input #1: E8174000
+# - important part here for input #1: E8174000 - 004017E8
 a = '000000000000000000000000000000000000000000000000000000E8174000'
 
 b = '000000000000000000000000000000adde0000efbe0000031a4000E81740001d194000'
@@ -46,50 +46,53 @@ import binascii
 
 test = '6>#"26 Z7;ol`h☺{n↔sfj|lk∟xtmfshs-:-/V):03;ulwerwi↔ph↨txl'
 print(test)
+
 # key = itertools.cycle([94, 95, 64, 73, 84, 67])
 # line = ''.join([chr(k ^ ord(item)) for item, k in zip(test, key)])
 # print(line)
 #
-original = """06 0E 17 12 03 01 10 18 07 0B 5B 5C 51 5F 44 43 5E 2D 47 56 5B 45 5D 5B 2C 4C 44 5C 51 43 45 58
-43 19 0A 1C 18 13 11 0A 00 07 0B 44 55 46 55 42 43 59 2C 47 58 55 44 48 58 30 59 42 55"""
 
-counter = 110
-for item in original.split():
-    i = int(item, 16)
-    print(item, '--> ', i, '--> ', chr(i ^ counter))
-    counter += 1
+original = """06 0E 17 12 03 01 10 18 07 0B 5B 5C 51 
+              5F 44 43 5E 2D 47 56 5B 45 5D 5B 2C 4C 
+              44 5C 51 43 45 58 43 19 0A 1C 18 13 11 
+              0A 00 07 0B 44 55 46 55 42 43 59 2C 47 
+              58 55 44 48 58 30 59 42 55"""
 
 
-i = int('06', 16)
-for index in range(256):
-    new = chr(i ^ index)
-    if new in 'hH':
-        print(i, index, hex(index), new)
 
+f1 = '0040170B'
+f2 = '004017E8'
+f3 = '0040191D'
+f3a = '0040191'
+f4 = '00404263'
 
-i = int('0E', 16)
-for index in range(256):
-    new = chr(i ^ index)
-    if new in 'aA':
-        print(i, index, hex(index), new)
+f4 = '00401A03'
 
+a1 = 'xdead'
+a2 = 'beef'
+a3 = 'feed'
+a4 = 'f00d'
 
-i = int('17', 16)
-for index in range(256):
-    new = chr(i ^ index)
-    if new in 'cC':
-        print(i, index, hex(index), new)
+s1 = 'notyetdone'
+s2 = 'andinthatyear'
+# combination = 'notyetdone'
+combination = '{0}{1}{2}{3}{4}004017E800---'.format(s1, f1, f2, f3a, 'notyetdone0040170B')
+# combination = '{0}{1}{2}{3}{4}{5}{6}{7}{8}'.format(s1, f1, f2, f3, a1, a3, a3, f3a, f1)
+print(combination + '<-- ', len(combination))
 
-i = int('12', 16)
-for index in range(256):
-    new = chr(i ^ index)
-    if new in 'kK':
-        print(i, index, hex(index), new)
+for key, encrypted in zip(combination, original.split()):
+    key_value = hex(ord(key))
+    # print(key_value, end=' ')
+    text = hex(int('0x{}'.format(encrypted), 16))
+    print(chr(int(key_value, 16) ^ int(text, 16)), end='')
+print('<--', end='')
+print()
 
-print(int('00000030', 16) ^ int('00000006', 16))
-
-'6E6F74796574646f6e6528'
-' n o t y e t d o n e '
-
-for item in 'notyetdone(':
-    print(hex(ord(item)), end=' ')
+#
+# for key, value in zip(test, original.split()):
+#     print(key, '--> ', value)
+#
+for index in range(255): # ':?{}|\ABCDEFGHIJKLMOPQRSTUVWXYZ1234567890-=.abcdefghijklmnopqrstuvwxyz':
+    x = hex(index)
+    y = hex(0x19)
+    #print(x, y, ":", chr(int(x, 16) ^ int(y, 16)))

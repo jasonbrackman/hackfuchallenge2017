@@ -1,0 +1,18 @@
+As you speak the words, the void collapses around you. The white light blinks out, and you
+awaken in a very dingy, very solid and very real dungeon. Your body aches from the beating you
+received from the red robed cultists.
+
+Sourceless words echo in your head. “I am weak and trapped but I will try to help you.”
+
+As you sit up, you take notice of a faint glow on the wall opposite you. It fades quickly,
+revealing a computer kiosk, complete with a keyboard, set into the stone wall.
+
+The computer has no network connection, but it also doesn’t appear to be as locked down as a
+standard kiosk. Everything from the command line to the card games are available to you. And
+stuck in a USB port on one side, you notice a white USB stick.
+
+You unplug the USB stick and look it over. The word “LATER” is written on one side. You plug
+it back into the kiosk, but soon find that no USB drivers are installed, so you can’t read
+its contents. Shrugging, you put the USB stick in your pocket and start a game of Minesweeper.
+
+CHALLENGE CODENAME: UNFATHOMABLE DREAMING ARTIFICE

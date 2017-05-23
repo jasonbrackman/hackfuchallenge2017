@@ -22,7 +22,6 @@
 # '--'-' `-`-'`-'  `-`--'`-'-' `-`-'  '--'  `--'`-''   `--||`-' `-'`-' '
 #                                                         ;|
 #                                                      `-' '
-#
 #  0000000000400c21 <create_decrypt_key>:
 #
 #   400c21:   55                      push   %rbp
@@ -90,3 +89,20 @@
 #   400cdd:   e8 0e fb ff ff          callq  4007f0 <__stack_chk_fail@plt>
 #   400ce2:   c9                      leaveq
 #   400ce3:   c3                      retq
+import os
+
+import challenge_00
+
+
+def decrypt_message(passkey):
+    infile_ = os.path.abspath('./Challenges/Challenge 6/solution.txt.enc')
+    outfile_ = os.path.abspath('./Challenges/Challenge 6/generated_content/solution.txt')
+
+    challenge_00.decrypt_openssl(infile=infile_, outfile=outfile_, passphrase=passkey)
+
+#  Used the debugger edb on Linux virtual machine one more time, found: phantom_bits
+#  Changed time on my host (this changed it in the virtual machine) to be the death date of L. Ron Hubbard
+#  revealed:
+
+passkey = 'hackfusummonthedemonatyourperilitisnotintelligentactuallyitsferal'
+decrypt_message(passkey)

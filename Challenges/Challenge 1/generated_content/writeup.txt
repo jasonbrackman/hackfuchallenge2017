@@ -1,0 +1,25 @@
+First Challenge Complete!
+
+I immediately opened the first challenge thinking the first one will be the easiest.  It has to be, right?  They wouldn't want to crush me from the get go?  This is the sequence of events that led to its completion of the first challenge.
+
+I started out by opening an image of obvious historic value, but I did  not immediately recognize it.  I mean I recognized the context and I recognized the mission name and the astronaut - but I really didn't know anything about this image.  I looked it up and found it was not the original, but an altered copy likely made to make the image 'look' more interesting, but created opportunity for conspiracists to use as evidence that the moon landing was faked!
+
+I zoomed in to the image and started a visual examination.  A subtle watermark was visible near the bottom - I was on the case.  Using google image search I found a series of images that this image was based upon and while they were smaller in kb, they had the same number of pixels.  Using Python and Pillow I did a quick diff between the image from the internet and the challenge image.  I turned all pixels that were a cumulative difference greater than ten a white colour, which revealed:  DidTheMoonLandingReallyHappen?!?
+
+I was super excited and immediately felt I had solved the riddle!  I slapped on 'hackfu' as a prefix and lowercased the rest -- and tried to openssl the encoded challenge -- but, as the creators intended, it did not work.  I was too quick to conclude I had found what I needed.
+
+I found a nice hex editor for my Mac, Hex Fiend, and a quick examination showed the words pass3/password repeated  a few times and the familiar PK.  I knew this PK because, at 42, I am old and PKZip was a staple of computing for a very long time - I was alive when there was Windows 95 and Double Dos.  Looking up header information revealed two things.   The first was that I could simply save out where the PKZip file started to the end of the file, and the other was that I was actually looking at a JFIF file.  Up to this point I actually thought it was a bitmap.
+
+Again -- super excited I figured this was Eureka! time and tried to open the Zip file only to find an error was produced.  Googling the error suggested I had a password protected zip file and my mac needed additional software to open it.  I found a good command line tool that I could use with Python in case I wanted to script a solution, called 'unar'.  I again felt that I had found the answer and used the DidTheMoonLandingReallyHappen?!? as the zip password.  But alas - it failed.
+
+At this point I went down a deep dark hole.  I started reading documents about least significant bit (LSB) steganography and masking and bitshifting.  I was questioning why the JFIF was saved out as YCbCr 4:4:4 instead of 4:2:0.  It felt as if hidden data existed in the additional digital bloat.  Why else would a jpeg format be saved out so large?  My mind though, it started to wander away from the goal, I kept thinking I must have found the answer and didn't want to let go -- I started a process that put random words together trying to break what I knew was AES 256 encryption. A crazy electricity waster that couldn't possibly work in my lifetime.   I started talking about my issues with my wife who, when I explained to her about masking and bit shifting,  would repeat back to me 'bitch shift? I love you, but maybe not this much.'   She does love me -- but I needed to refocus. I needed to relax and get back to where the puzzle was leading me.
+
+Days passed.
+
+I started reading a lot of small papers on steganography and realizing that there are just so many ways to apply LSB that if there was a hidden message it must have been done with something available to everyone.  I started to look for online decoders -- and came across https://futureboy.us/stegano/decinput.html which is based off of steghide.  Again -- I saw another opportunity to enter in a password -- and my trusty DidTheMoonLandingReallyHappen?!? was used again.   And.  Finally.  It worked!   Revealing HereMenFromThePlanetEarthFirstSetFootUponTheMoon,July1969A.D.WeCameinPeaceForAllMankind.
+
+I entered the phrase when prompted.  I didn't want to get my hopes up --- but this time IT OPENED!  Everything was now all falling into place like that last piece of a 1000 piece jigsaw puzzle.  And it felt good.  The password file was generated.  I double clicked to reveal:  HackFuTheresAFalseWallInTheBackOfTheClosetQuiteObviousReally
+
+Finally! I had HackFu at the start -- i knew I was done.  I entered in the password but it failed. In my frantic excitement I forgot to lowercase the password, but it was a slight stumble and a few moments later the deed was done.  I woke my sleeping wife beside me -- 'I DID IT!' --- and half asleep she said 'turn off the computer'  -- and I will, right after I send this write up.
+
+BrackAttack

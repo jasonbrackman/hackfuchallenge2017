@@ -1,25 +1,41 @@
-The door shuts as soon as you enter, and you find yourself alone. The room is dark, but not completely black, and you can dimly make out the four walls around you. A black opening gaps in the wall immediately ahead.
+The door shuts as soon as you enter, and you find yourself alone. The room is dark, but not completely black, and you
+can dimly make out the four walls around you. A black opening gaps in the wall immediately ahead.
 
 “Step forward,” booms a loud voice from high above.
 
 You step through the opening, trading the claustrophobia of that dim antechamber for the unknown darkness ahead.
 
-With a WHOOSH, flaming torches all around light up, illuminating the chamber. You are standing in a massive space, and are surrounded by figures in black cloaks, all with hoods pulled over their faces. They are still, and but for the faint sound of breathing, could be mistaken for inanimate props.
+With a WHOOSH, flaming torches all around light up, illuminating the chamber. You are standing in a massive space, and
+are surrounded by figures in black cloaks, all with hoods pulled over their faces. They are still, and but for the faint
+sound of breathing, could be mistaken for inanimate props.
 
-The torches’ flames flicker, creating eerie shadows on the earth-coloured walls. Though you entered a fairly nondescript building in the middle of the city centre moments ago, you now feel as though you’re standing in a cave in the middle of the wilderness. There’s a smell of aged dirt, and what little you can see of the surface above you is irregular, marked with what seem to be stalactites.
+The torches’ flames flicker, creating eerie shadows on the earth-coloured walls. Though you entered a fairly nondescript
+building in the middle of the city centre moments ago, you now feel as though you’re standing in a cave in the middle of
+the wilderness. There’s a smell of aged dirt, and what little you can see of the surface above you is irregular, marked
+with what seem to be stalactites.
 
-There’s a rumbling of voices from the cloaked figures around you. You think they’re about to start chanting or something. Preparing for some ritual or other. A sacrifice, maybe? You attempt to dismiss such a grisly thought, but it lodges.
+There’s a rumbling of voices from the cloaked figures around you. You think they’re about to start chanting or
+something. Preparing for some ritual or other. A sacrifice, maybe? You attempt to dismiss such a grisly thought, but it
+lodges.
 
-The figures start lifting their arms up, stretching them out and reaching for the ceiling with an array of uniformly bony fingers. They do this in unison, as if the entire cave were a giant clockwork construction, a life-size synchronised and extremely creepy set of music boxes.
+The figures start lifting their arms up, stretching them out and reaching for the ceiling with an array of uniformly
+bony fingers. They do this in unison, as if the entire cave were a giant clockwork construction, a life-size
+synchronised and extremely creepy set of music boxes.
 
-As if to further your metaphor, there’s a speaker crackle, and then music. Tinkling piano keys fill the cave. You recognise the tune at once – Twinkle, Twinkle, Little Star.
+As if to further your metaphor, there’s a speaker crackle, and then music. Tinkling piano keys fill the cave. You
+recognise the tune at once – Twinkle, Twinkle, Little Star.
 
-You feel something bump against your feet. Looking down, you see a rectangular plastic object before your shoes. Closer inspection reveals it to be a laptop. You’re not sure who put it there, as the figures around you are all standing still with their arms outstretched.
+You feel something bump against your feet. Looking down, you see a rectangular plastic object before your shoes. Closer
+inspection reveals it to be a laptop. You’re not sure who put it there, as the figures around you are all standing still
+with their arms outstretched.
 
-You crouch down and pull open the laptop. On the screen, text scrolls by on a terminal. The text consists of a single line repeated over and over:
+You crouch down and pull open the laptop. On the screen, text scrolls by on a terminal. The text consists of a single
+line repeated over and over:
 
 HOW I WONDER WHAT YOU ARE?
 
-You Ctrl-C the scrolling text and get a file listing for the working directory. There’s a single file: twinkle.mp3. Its contents are obvious.
+You Ctrl-C the scrolling text and get a file listing for the working directory. There’s a single file: twinkle.mp3. Its
+contents are obvious.
 
-The song reaches its conclusion, and immediately starts again. The figures surrounding you show no intent of changing their positions. You have no idea how long this could go on.
+The song reaches its conclusion, and immediately starts again. The figures surrounding you show no intent of changing
+their positions. You have no idea how long this could go on.

@@ -1,0 +1,35 @@
+The APK file format was introduced for this challenge.  A quick stackoverflow search showed that I could run it with a
+chrome extension called "Arc Welder".  I downloaded this and ran the program.  Pretty straighforward - find the password
+and unlock the next stage.
+
+I found something called APKTool which could decompile into a type of weird assembly and did this on the virtualbox I
+had previously setup for the decryptor challenge.  I started looking through the files and immediately came upon the
+list of numbers.  I also found what I believe now to be a distractor which was a 'decrypt_key=87'.  I attempted to do
+some funky math, xoring, rotation stuff, but nothing appeared satisfying.   The APKTool also had an interesting
+secondary feature - you could make changes and recompile the APK.  I used this to make the time limit unlimited and to
+stop the obfuscation of the password guesses.
+
+Unfortunately this wasn't helping me really.  The pseudo assembly code wasn't clear enough and I wasn't sure if I wanted
+to delve too deeply into this area.  I did another google search for APK decompile and found an online resource that
+converted everything to JAVA.  So now I had a second set of code -- and now had a really good sense of what was going on.
+
+I did attempt to find a debugger that I could attach to the arc welder, but no joy on that front.  I made a decision to
+rewrite the java code in python and after 30 minutes had a working version.  There were two significant errors that
+likely happened during the decompile to java that had to be fixed in the Python side, such as a weird infinitie loop and
+a total misunderstanding of a for loop and a character variable.  I wondered if it was accidental or if the creators of
+the challenge knew that these issues would pop up.
+
+Right away I saw the clue (even though it was off by a letter because of the weird errors mentioned earlier):
+'pomegranates2eds'.  I entered the proper 'pomegranateseeds' and sure enough got a recipe and a button to press 'export'
+on.  However, I got distracted with a problem of getting the soup.chef file.  I didn't realize it was the same as what
+was printed on screen and it took some time to figure out how to get the file from the html5 sandbox.  Stackoverflow
+again had a solution: {"enableExternalDirectory": true} on the Arc Welder startup.  Thankfully, I
+didn't spend too much time on this.  I immediately saw the large numbers for the ingredients, but disregarded the second
+part in a haste to finish the puzzle.  But quickly realized there was more.
+
+Once I repositioned the numbers I ran the code through the decryptor I rewrote from the original APK,
+but got gobbleygook.  I then tried a simple char conversion -- looking for the sings of 'hackfu'.  Sneaky sneaky -- the
+message was there but reversed: 'hackfuwhereitlandswesetourscene'.
+
+
+

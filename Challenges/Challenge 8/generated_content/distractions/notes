@@ -14,6 +14,12 @@ domoarigatomrroboto - qr code
   and then this doesn't mean that steghide was used.
 - this wav file appears to store its data in 16bit chunks, lsb of those chunks does not appear
   to reveal anything significant.
+- 'password hellomoto' reveals some old motorola manuals, but the default backup passwords listed
+  of 1234 and 000000 these and the following did not open the 7z file.
+  'domoarigatomrroboto' as a pin = 3666274428667762686
+  'password' as a pin = 72779673
+  'hellomoto' as a pin = 435566686
+
 
 
 qwavheaderdump -F 047b704a141707ec15a8171ab1d37dbd.wav
@@ -37,3 +43,22 @@ qwavheaderdump -F 047b704a141707ec15a8171ab1d37dbd.wav
 	data length: 1635017060
 		data length field should be 970432
 		fixed
+
+
+# it's actually all part of an album called "Kilroy Was Here". In the future rock and roll
+# is banned by a fascist government and a group called the mmm (the majority for musical
+# morality) and kilroy is a rocker who gets jailed. Mr. Roboto is about him escaping prison.﻿
+
+
+# Japanese Lyrics:
+# どうもありがとうミスターロボット (Dōmo arigatō misutā Robotto)
+# また会う日まで (Mata au hi made)  'mataauhimade'
+# どうもありがとうミスターロボット (Dōmo arigatō misutā Robotto)
+# 秘密を知りたい (Himitsu wo shiritai) 'himitsuwoshiritai'
+
+# English Translation:
+# Thank you very much, Mr. Roboto
+# Until we meet again
+# Thank you very much, Mr. Roboto
+# I want to know your secret
+

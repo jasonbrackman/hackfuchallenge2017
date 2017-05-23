@@ -1,8 +1,14 @@
-Once more, you find yourself standing before the hastily put-up chainlink fence around your town’s only soccer field. You don’t need to scale it this time, as the door has been left open. No-one notices you enter, as all the cultists are gathered in a circle in the middle of the field, around where the metal container used to be. There’s a strong smell of incense in the air, and the cultists are in the middle of low, ominous chant.
+Once more, you find yourself standing before the hastily put-up chainlink fence around your town’s only soccer field.
+You don’t need to scale it this time, as the door has been left open. No-one notices you enter, as all the cultists are
+gathered in a circle in the middle of the field, around where the metal container used to be. There’s a strong smell of
+incense in the air, and the cultists are in the middle of low, ominous chant.
 
-After making sure your black hood is properly pulled over your head, you infiltrate the circle, mimicking the low chanting while moving towards the centre, shoving as few people as possible.
+After making sure your black hood is properly pulled over your head, you infiltrate the circle, mimicking the low
+chanting while moving towards the centre, shoving as few people as possible.
 
-Finally, you stand among the frontmost row of black-robed cultists. In the centre of the gathering is a small, perfectly circular hole, out of which wafts an evil purple smoke. Four yellow-robed cultists stand to each side of the hole.
+Finally, you stand among the frontmost row of black-robed cultists. In the centre of the gathering is a small,
+perfectly circular hole, out of which wafts an evil purple smoke. Four yellow-robed cultists stand to each side
+of the hole.
 
 In a shrill voice, one of the yellow robes cries, “Come, o Light!”
 
@@ -22,7 +28,8 @@ The chant around you grows louder. “Little star. Little star.”
 
 “I call you from the east. Come, o Light!”
 
-Around the circle, the yellow-robed cultists join hands, just as the black-robed cultists around you are reaching a fever pitch in their chanting.
+Around the circle, the yellow-robed cultists join hands, just as the black-robed cultists around you are reaching a
+fever pitch in their chanting.
 
 “Twinkle twinkle,” they chant, “little star!”
 
@@ -30,22 +37,33 @@ Around the circle, the yellow-robed cultists join hands, just as the black-robed
 
 “What you are!” continues yellow robe directly across from the first one.
 
-A column of blinding white light immediately shoots out from the hole. The yellow-robed cultists around it, arms still linked, a swiftly sucked inside, and the light expands outward.
+A column of blinding white light immediately shoots out from the hole. The yellow-robed cultists around it, arms
+still linked, a swiftly sucked inside, and the light expands outward.
 
 As the light grows, the crowd cheers. Sirens sound faintly in the distance.
 
-The light draws nearer. A searing pain rips through your skull. You put a hand to your face, and draw it away covered in blood. Horrible images fill your thoughts.
+The light draws nearer. A searing pain rips through your skull. You put a hand to your face, and draw it away covered
+in blood. Horrible images fill your thoughts.
 
-You see your town, buildings razed to the ground, the grass blackened, the trees gone. You see slaves, at first people you know, and then robed cultists, and then hordes upon hordes of others, total strangers. Every single one bears an expression of unimaginable pain, and they are dirty and full of cuts and scars.
+You see your town, buildings razed to the ground, the grass blackened, the trees gone. You see slaves, at first people
+you know, and then robed cultists, and then hordes upon hordes of others, total strangers. Every single one bears an
+expression of unimaginable pain, and they are dirty and full of cuts and scars.
 
-You see neighbouring towns and cities, and they are the same blackened hellscapes, crawling with the same desperate, walking dead husks of humanity. Your perspective zooms out and moves across the whole world. Everywhere the same; everywhere hopeless.
+You see neighbouring towns and cities, and they are the same blackened hellscapes, crawling with the same desperate,
+walking dead husks of humanity. Your perspective zooms out and moves across the whole world. Everywhere the same;
+everywhere hopeless.
 
-And then you see the source: the great column of light. The light extends from the ground out into space, and is joined by more columns, all across the world. The slaves toil to release the light in new places – spades and pickaxes eat at the earth, light exploding from the holes.
+And then you see the source: the great column of light. The light extends from the ground out into space, and is
+joined by more columns, all across the world. The slaves toil to release the light in new places – spades and pickaxes
+eat at the earth, light exploding from the holes.
 
 ~§~
 
-You come out of your trance to see the column of light still expanding. The cultists around you are in a frenzy, crawling on the ground and digging up the dirt with their fingernails.
+You come out of your trance to see the column of light still expanding. The cultists around you are in a frenzy,
+crawling on the ground and digging up the dirt with their fingernails.
 
-You feel something small and hot against your skin, in your pants pocket. You fish out the strange USB stick the marked “LATER”, the one you found plugged into the kiosk. It emits a faint glow as you cradle it in your palm.
+You feel something small and hot against your skin, in your pants pocket. You fish out the strange USB stick the marked
+“LATER”, the one you found plugged into the kiosk. It emits a faint glow as you cradle it in your palm.
 
-Among the bags of equipment stacked up against the chainlink fence, you find a laptop. The password is easily guessable, and you quickly insert the USB stick. The stick contains a single binary file named “lights-out.exe”.
+Among the bags of equipment stacked up against the chainlink fence, you find a laptop. The password is easily guessable,
+and you quickly insert the USB stick. The stick contains a single binary file named “lights-out.exe”.

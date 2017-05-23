@@ -36,11 +36,8 @@ def decrypt_openssl(infile=None, outfile=None, passphrase=None):
     if plt.startswith('Windows'):
         cmd = 'c:\\openssl\\bin\\openssl enc -d -base64 -aes-256-cbc -salt'.split()
 
-
-
-
     if infile:
-        cmd += ['-in', infile]
+        cmd += ['-in', infile.lower()]
 
     if outfile:
         cmd += ['-out', outfile]
@@ -60,11 +57,14 @@ if __name__ == "__main__":
     for line in result[0].decode().split('\n'):
         print(line)
 
-   # decrypt_openssl(infile='challenge_00/Challenges.zip.enc', outfile='challenge_00/Challenges.zip', passphrase=key)
+    # decrypt_openssl(infile='challenge_00/Challenges.zip.enc', outfile='challenge_00/Challenges.zip', passphrase=key)
+
     # decoding the contents reveals:
     # Ah, good, at least we know you can decrypt stuff.
     #
-    # Now that you've decrypted this, you can decrypt the ZIP file with all the challenges using the same password. To register for the 2017 Hackfu Challenge and get your name up on the leaderboard, please send us an email with the following:
+    # Now that you've decrypted this, you can decrypt the ZIP file with all the challenges using the same password.
+    # To register for the 2017 Hackfu Challenge and get your name up on the leaderboard, please send us an email with
+    # the following:
     #
     # Subject: Hackfu Challenge 2017 - Registration
     # Email address: covertcorrespondent2017@mwrinfosecurity.com

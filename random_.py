@@ -1,12 +1,12 @@
 # https://www.reddit.com/r/codes/comments/62rl1a/good_luck/
-import base64
 import hashlib
 import collections
-
+from itertools import permutations
 import math
 import os
-
+import base64
 import subprocess
+
 
 code = '1171429351229372322293627322717233535293117293519193315111334393725393312272931193334373229393722243'
 letters = [code[index:index+2] for index in range(0, len(code), 2)]
@@ -73,7 +73,8 @@ def crack_zip():
                  'believe', '2700', '1969', '386',
                  'Fact', 'Fiction', 'fact', 'fiction', 'FACT', 'FICTION',
                  'lies', 'Lies', 'LIES',
-                 'Fake', 'FAKE', 'fake', 'u4j']
+                 'Fake', 'FAKE', 'fake', 'u4j'
+                 ]
 
     # passwords = [str(nums) for nums in range(99, 1000, 1)] <-- :(
     # passwords = (''.join(i) for i in itertools.product('DidTheMoonLandingReallyHappen?!?', repeat=32))
@@ -94,10 +95,28 @@ def crack_zip():
             print(index, '[{}] attempt with: {}'.format(response, password))
             break
 
-def unzip(input_01, password, hash=False):
-    if hash:
-        password = hashlib.md5(password.encode()).hexdigest()
 
+def unzip(input_01, password, hash=False, b64=False, salt=None):
+    if salt and not isinstance(salt, bytes):
+        salt = salt.encode()
+    if not isinstance(password, bytes):
+        password = password.encode()
+
+    password = password.decode()
+    # password = password.lower()
+    # password = password.replace(" ", '').replace("'", '').replace('-', '').replace(',', '').replace('.', '').replace('!', '')
+    password = password.encode()
+
+    if b64:
+        password = base64.b64encode(password)
+
+    if hash:
+        t = hashlib.md5()
+        if salt:
+            t.update(salt)
+        t.update(password)
+        password = t.hexdigest()
+    password = password.strip()
     cmd = [r'/Users/jasonbrackman/Downloads/unar1.10.1/unar',
            '-f',
            '-p', password,
@@ -114,104 +133,148 @@ def unzip(input_01, password, hash=False):
     stderr, stdout = proc.communicate()
     # print(stderr.decode())
     # print(stdout.decode())
-    return stdout
+    return stdout + stderr, password
 
 def test_hashes():
-    files = ['words.txt', 'words2.txt', 'words3.txt']
+    files = ['words.txt', 'words2.txt', 'words3.txt', 'crackstation.txt']
     for f in files:
-        with open(r'.\challenges\challenge 8\generated_content\{}'.format(f), 'rt') as handle:
-            words = handle.readlines()
-            for word in words:
-                result = hashlib.md5(word.encode()).hexdigest()
+        filepath = os.path.abspath(r'./challenges/challenge 8/generated_content/{}'.format(f))
+        with open(filepath, 'rb') as handle:
 
-                unknown_01 = '286755fad04869ca523320acce0dc6a4'
+            for word in handle:
+
+                result = hashlib.md5(word).hexdigest()
+
+                unknown_01 = '286755fad04869ca523320acce0dc6a4'  # password
                 if result == unknown_01:
                     print("[MATCH] {} = {}".format(word.strip(), unknown_01))
 
-                unknown_02 = '047b704a141707ec15a8171ab1d37dbd'
+                unknown_02 = '047b704a141707ec15a8171ab1d37dbd'  # hellomoto
                 if result == unknown_02:
                     print("[MATCH] {} = {}".format(word.strip(), unknown_02))
+
+                unknown_03 = 'e85150c59040bbfe9b14ee0f5fa9e2cf'  #
+                if result == unknown_03:
+                    print("[MATCH] {} = {}".format(word.strip(), unknown_03))
 
     print(hashlib.md5('domoarigatomrroboto\n'.encode()).hexdigest())
 
 
+def get_items(files):
+    for f in files:
+        fullpath = os.path.abspath(r'./challenges/challenge 8/generated_content/{}'.format(f))
+
+        with open(fullpath, 'rt') as handle:
+            for item in handle:
+                yield item.strip()
+
+
 if __name__ == "__main__":
     # reddit_thing()
-    # get_standard_deviation()
+    # #get_standard_deviation()
 
-    print(hashlib.md5('hellomoto\n'.encode()).hexdigest())
+    items = [# '1983', #'cypher', 'decipher', 'question',
+             # 'domoarigatomrroboto', 'hellomoto', 'password',
+             # 'kilroy', 'kilroywashere', 'roboto', 'escape', 'clue',
+             # 'himitsuwoshiritai', 'mataahoohimade', 'thankyouverymuchmrroboto',
+             # 'imkilroykilroykilroykilroy', 'android', 'mrroboto', 'modren',
+             # "Domo arigato misuta Robotto",
+             # "Mata au hi made",
+             # "Domo arigato misuta Robotto",
+             # "Himitsu wo shiritai",
+             # "Domoarigatomisuta RobottoMata au hi madeDomo arigato misuta RobottoHimitsuwoshiritai",
+             # "You're wondering who I am-machine or mannequin",
+             # "With parts made in Japan, I am the modren man",
+             # "I've got a secret I've been hiding under my skin",
+             # "My heart is human, my blood is boiling, my brain I.B.M.",
+             # "So if you see me acting strangely, don't be surprised",
+             # "I'm just a man who needed someone, and somewhere to hide",
+             # "To keep me alive, just keep me alive",
+             # "Somewhere to hide to keep me alive",
+             # "I'm not a robot without emotions, I'm not what you see",
+             # "I've come to help you with your problems, so we can be free",
+             # "I'm not a hero, I'm not a savior, forget what you know",
+             # "I'm just a man whose circumstances went beyond his control",
+             # "Beyond my control, we all need control",
+             # "I need control, we all need control",
+             #
+             # "I am the modren man, who hides behind a mask",
+             # "So no one else can see my true identity",
+             #
+             # "Domo arigato, Mr. Roboto, domo, domo",
+             # "Domo arigato, Mr. Roboto",
+             #
+             # "Thank you very much, Mr. Roboto",
+             # "For doing the jobs nobody wants to",
+             # "And thank you very much, Mr. Roboto",
+             # "For helping me escape to where I needed to",
+             # "Thank you, thank you, thank you",
+             # "I want to thank you, please, thank you, oh yeah",
+             #
+             # "The problem's plain to see, too much technology",
+             # "Machines to save our lives. Machines dehumanize.",
+             #
+             # "The time has come at last",
+             # "To throw away this mask",
+             # "Now everyone can see",
+             '54e7ab81f64f4c3e398951be124bc27b',
+             '2fe5eea0ec270f6dad45fc8d99d0cf90',
+             'bd66afb1e9da96723ffecf62cdae6f60',
+             'ec1dad85eb391fdaaa3b47e721e7b9f1',
+             '426133c4d7ef340fbe0da49c9cadbdc5',
+             'bc2ebf462409f54173dc1cdecbabe166',
+             '6dbcdf333c16781d634a9dc6a1623370',
+             '1d330a738dbc1cd112e023cb58e52460',
+             '80eebf28cbc124ff143425ad72941046',
+             '92adf58c7edce1f212c74dc51aa7cfd5',
+             '4141ee79e08eb2727fd0d779c9f0a376',
 
-    domo = 0xc409227ae91cee2dba2cacae31dc1588
-    moto = 0x047b704a141707ec15a8171ab1d37dbd
-    pas_ = 0x286755fad04869ca523320acce0dc6a4
+             # "My true identity", 'Domo Arigato Moto Roboto',
+             # "I'm Kilroy! Kilroy! Kilroy! Kilroy!", 'Robert Orin Charles Kilroy',
+             # 'styx', 'Dōitashimashite',
+             # '1234', 'paradise theatre', 'paradise theater', 'backmasking', 'snowblind', 'domo',
+             # 'rock', 'rockcode', 'nomorerock', 'caughtintheact', 'styxcaughtintheact',
+             # 'themajorityformusicalmorality', 'mmm', 'kwh', 'motodomoboto', 'domomoto', 'motodomo',
+             # 'rightous', 'paradise', 'damr', 'username', '', 'kilroykilroykilroy', 'yourwelcome',
+             # 'Mr.Roboto', 'Kilroyishere', 'Jonathan Chance', 'Lt.Vanish', 'Col.Hyde', 'Dr.Righteous',
+             # '646F6D6F6172696761746F6D72726F626F746F',  # domoarigatomrrobot in hex
+             # '100111109111971141051039711611110911411411198111116111', #domoarigatomrrobot in ordinals
+             # '2058', # domoarigato as ordinal added together.
+             # '100000001010', # 2058 in binary
+             # '1100100110111111011011101111110000111100101101001110011111000011110100110111111011011110010111001011011111100010110111111101001101111', #domo.. in binary
 
-    print(domo + moto)
+             'jason'
 
-    # items = ['cypher', 'decipher', 'question',
-    #          'domoarigatomrroboto', 'hellomoto', 'password'
-    #          'kilroy', 'kilroywashere', 'roboto', 'escape', 'clue',
-    #          'himitsuwoshiritai', 'mataahoohimade', 'thankyouverymuchmrroboto',
-    #          'imkilroykilroykilroykilroy', 'android', 'mrroboto', 'modren',
-    #          "Domo arigato misuta Robotto",
-    #          "Mata au hi made",
-    #          "Domo arigato misuta Robotto",
-    #          "Himitsu wo shiritai",
-    #          "You're wondering who I am-machine or mannequin",
-    #          "With parts made in Japan, I am the modern man",
-    #          "I've got a secret I've been hiding under my skin",
-    #          "My heart is human, my blood is boiling, my brain I.B.M.",
-    #          "So if you see me acting strangely, don't be surprised",
-    #          "I'm just a man who needed someone, and somewhere to hide",
-    #          "To keep me alive, just keep me alive",
-    #          "Somewhere to hide to keep me alive",
-    #          "I'm not a robot without emotions, I'm not what you see",
-    #          "I've come to help you with your problems, so we can be free",
-    #          "I'm not a hero, I'm not a savior, forget what you know",
-    #          "I'm just a man whose circumstances went beyond his control",
-    #          "Beyond my control, we all need control",
-    #          "I need control, we all need control",
+    ]
+    input_01 = os.path.abspath('./challenges/challenge 8/generated_content/password.7z')
+
+    #moto
+    #domo
+    #boto
+
+    files = ['rockyou.txt'] # 'words.txt', 'words2.txt', 'words3.txt']
+    # files = ['crackstation.txt']
+    # items = get_items(files)
+    #items = (str(x) for x in range(1_000_000_000_000_000_000, 2_000_000_000_000_000_000))
+
+    items = [''.join(p) for p in permutations(['domo', 'arigato'])]
+    # items = set(items)
+    print(len(items))
+
+    for index, password in enumerate(items):
+        result, mangled = unzip(input_01, password, hash=False, b64=False, salt=None)
+        response = 'FAIL' if b'fail' in result or b'Wrong password?' in result else 'PASS'
+        if index % 500 == 0:
+            print('Completed so far: {}, and crunching on {}'.format(index, password))
+        if 'PASS' in response:
+            print('[{}] attempt with: {}'.format(response, mangled))
+            break
+
+    # result = 0
+    # x = 'domoarigatomrroboto'
+    # for item in x:
+    #     result += ord(item)
+    # print(result)
     #
-    #          "I am the modern man, who hides behind a mask",
-    #          "So no one else can see my true identity",
-    #
-    #          "Domo arigato, Mr. Roboto, domo, domo",
-    #          "Domo arigato, Mr. Roboto",
-    #
-    #          "Thank you very much, Mr. Roboto",
-    #          "For doing the jobs nobody wants to",
-    #          "And thank you very much, Mr. Roboto",
-    #          "For helping me escape to where I needed to",
-    #          "Thank you, thank you, thank you",
-    #          "I want to thank you, please, thank you, oh yeah",
-    #
-    #          "The problem's plain to see, too much technology",
-    #          "Machines to save our lives. Machines dehumanize.",
-    #
-    #          "The time has come at last",
-    #          "To throw away this mask",
-    #          "Now everyone can see",
-    #          "My true identity",
-    #          "I'm Kilroy! Kilroy! Kilroy! Kilroy!"]
-    #
-    # input_01 = os.path.abspath('./challenges/challenge 8/generated_content/password.7z')
-    #
-    # # items = []
-    # # for f in ['words.txt', 'words2.txt', 'words3.txt']:
-    # #     with open(r'.\challenges\challenge 8\generated_content\{}'.format(f), 'rt') as handle:
-    # #         items += handle.readlines()
-    #
-    # for password in items:
-    #     password = password.lower().replace(" ", '').replace("'", '').replace('-', '').replace(',', '').replace('.', '').replace('!', '')
-    #     result = unzip(input_01, password, hash=False)
-    #     response = 'FAIL' if b'fail' in result or b'Wrong password?' in result else 'PASS'
-    #     # if 'PASS' in response:
-    #     print('[{}] attempt with: {}'.format(response, password))
+    # print('\n'.join(format(ord(s), 'b') for s in x))
 
-
-    print(base64.b64encode('1. Can you even split the line into a sensible three parts?'.encode()))
-    print(base64.b64encode('2. How many types of letters do you see?  How do the letters correspond to the cube?'.encode()))
-
-
-    print(base64.b64encode('3. Does it help if you know each center square – no matter if its rows/cols or cols/rows – still has to be the same?  Fill in those letters.'.encode()))
-
-    print(base64.b64encode('4. Select one of the colour sides you have completed – work out the coordinates – and how they work for those letters – then go through the rest of that colour – does that fill in enough of the gaps to understand the rest?'.encode()))

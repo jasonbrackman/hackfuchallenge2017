@@ -1,0 +1,38 @@
+Looking over this challenge reminded me of the ELF challenge.  I needed to see what was inside this exe.
+
+This challenge also had me testing out and playing with different debuggers, including IDA (which has a free trial
+version) and OllyDbg.  I split my time on this particular puzzle on my Mac, the Linux virtualbox and a PC.   Depending
+on where I was and the time I had to work on the challenge.  The interesting thing for me is how mature these debuggers
+are that they worked on different setups -- and each had different advantages.   Olly was great because you could set
+the current memory block to EBP or ESP and immediately see what was below or above the current address.  IDA was great
+for showing the overall structure of the program in function blocks.
+
+The ELF challenge was mostly done by printing out the assembly and going through the code by hand.  For this challenge
+I did the same.  It was an advantage to use the debugger, attach to lights-out and then step through the code as it
+went.  OllyDbg made it easy to change memory on the fly to see what would happen and then rerun with changed input.
+
+I spent several days researching and asking questions about assembly using Google and a programmer who I work with to
+truly grasp what was going on.  My initial thought was that the CMP code was comparing the return value of a function
+-- not its address.  Once this was understood my focus switched from understanding the code to figuring out how to
+'push' the address I wanted into the proper place to be compared to by the register.
+
+After several attempts I managed to place the correct numbers into the corresponding registers for both Input1 and
+Input2.  However, Input3 was doing something additional.  I was not yet done.  The code appeared to run to completion,
+but even after passing all the gates -- it just didn't seem to work.  I was missing something.
+
+At this point I know I failed some part of the challenge's expectation.  I wasn't able to figure out how to push
+the 'notyetdone' onto the proper part of the stack and into the correct area.  Instead, I re-wrote the xoring part of
+the problem in Python.  I exploited the fact that the passkey has to start with hackfu -- and started xoring the
+secret text block.  Sure enough the key started out as 'notyet'.  I recognized the phrase immediately as I had seen
+'notyetdone' as I stepped through the blocks in the debugger.  So I filled in the rest of the key with 'notyetdone'.
+This gave me 'hackfutwin' -- obviously 'kle' was needed -- which pointed me to the '0040' block.  Now I was seeing what
+the address at 00405040 contained.  So I filled in the next set of items with the three 32bit memory blocks -- and the
+passphrase slowly came together.  I had 'hackfutwingkleoutnowfoullittlestar' -- and wasn't sure what to do here as
+'0040' wasn't working out for the next letters.  So I started again with 'notyetdone' -- and that worked.
+
+I finally had the complete passphrase:  hackfutwinkleoutnowfoullittlestarwehavenointerestinwhatyouare
+
+I feel like the program should have given me the answer though -- so I'm still looking at the assembly.  But I feel
+like I cheated.  But still happy that I opened the solution.
+
+Now to return to #8!

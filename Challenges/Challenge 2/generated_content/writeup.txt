@@ -1,0 +1,25 @@
+Visually looking at the Rubik Cube layout really screamed to be printed, cut, folded, and taped together. In the
+meantime the long text block looked interesting and divided nicely into three rows of 75 items.
+
+Colour representation and coordinates came to mind. The coordinates, no matter what I did - would end
+up choosing the same colour and would result in a letter clash using the printed layout.  I had a strong feeling that
+to solve the encryption meant solving the cube.
+
+I printed out the cube, but knew I would either have to write a program to act as a cube, or go out and buy
+one.  I ended up finding a local drug store and bought a cube, some highlighters and white stickies.  Some arts and
+craft skills, several Rubik Cube online tutorials, and some patients resulted in a solved cube.
+
+I attempted again to match coordinates to the solved cube and had mixed results.  I was getting turned around somehow.
+But I felt I saw some repetitions and knew that no matter what my center letters must be correct but the decryption
+just looked like nonsensical structures.  This sidetrack had me XORing, rotating, and searching online for Rubik's cube
+encryption schemes.  I thrashed around on this for a day -- and unlike the intuition to solve the cube -- these
+attempts felt hallow. I was not able to progress until I finally asked myself what I wanted to see -- and I wanted to
+see a phrase that started with 'hackfu'.
+
+Sure enough the correct letters were present in the first six mappings. Also - the capitals fit perfectly as placement
+for spaces. Using a pen and paper I started mapping out what would need to happen to get the letters to fit. Another
+twenty or thirty minutes passed as I transferred the new mappings to a scripted decrypter. With
+'HackFuThreeBlocksNorthRightAtTheDoomsayerKnockThreeTimesOnTheUglyOrangeDoor' AND finally remembering to lowercase the
+line, the solution was in hand!
+
+
