@@ -1,7 +1,7 @@
 # HackFu 2017
 
 I'm writing this after completing the first ten HackFu 2017 challenges
-presented by  [MWR Info Security] (https://hackfu.mwrinfosecurity.com/).  Since 
+presented by  [MWR Info Security](https://hackfu.mwrinfosecurity.com/).  Since 
 I actually started these challenges almost eight weeks earlier - please read 
 with a sense of romanticism.  I may present something that fits in a sentence, but
 simplifies the time, commitment, and number of things that went wrong before
@@ -18,9 +18,9 @@ future solvers.  They will immediately know that there may be clues here that
 will end their frustration, but take away their personal victory. 
 
 What I recognized is needed to solve these challenges:
-1. Domain Knowledge is important
-2. Intuition is important
-3. Confidence and Humility are important
+1. Domain Knowledge
+2. Intuition
+3. Confidence w/ a touch of Humility
 
 What I had to learn or get better at technically:
 1. VirtualBox
@@ -82,6 +82,8 @@ HackFuTheresAFalseWallInTheBackOfTheClosetQuiteObviousReally
 
 # Challenge 02
 
+![cube](_readme_images/challenge_02_cube.jpg)
+
 Once on the board I was pretty stoked.  This challenge was maybe a week,
 but I never felt desperate -- it seemed pretty straight forward.
 
@@ -104,10 +106,12 @@ what I was doing.  This 'exploit' is something I used on several of the challeng
 
 # Challenge 03
 
+![wave](_readme_images/challenge_03_wave.jpg)
+
 So I work in a place that has an audio department - although I don't really know much about
 audio.  I happened to be in the audio peeps space though when they were showing me how they 
 could write words or hide pictures in the audio spectrum.  So when I saw the wav file I 
-immediately jumped to software that would reveal this part of the audio.
+immediately jumped to software that would reveal this part of the audio, Sonic Visualizer.
 
 The Wav file:
 - Played the audio ('Twinkle Twinkle Little Star...')
@@ -133,8 +137,12 @@ hackfuthisisthefinalstatementofreindercartwrightfounderoftheorderofthespark
 
 # Challenge 05
 
+![img](_readme_images/challenge_05_img.jpg)
+
 I'd be interested to know how others solved this one.  A 'broken' img file is provided.  I found
-some software that did say it could 'fix it', but I wasn't interested in paying the cash for it.
+some software that did say it could 'fix it', but I wasn't going to pay cash for it. :) -- There must be a 
+'hackfu' way!  
+
 
 The IMG file:
 - Examined the file using HexFiend.  Scrolling through the file revealed patterns (blocks?) of content.
@@ -173,6 +181,9 @@ The Text Stream / JPG Files:
 hackfuihaveseenthenightgauntsintheirhauntsandtheoldonesatthebottomofthesea
 
 # Challenge 06
+
+![decryptor](_readme_images/challenge_06_decryptor.jpg)
+
 This challenge fascinated me and was my favorite.  I had never heard of an ELF file - which is the first
 thing you find out when examining the header.  I also didn't know how to deal with 
 this file format at all.  I read up a bit about it and there is a lot of stuff that 
@@ -204,6 +215,9 @@ of his death and ran the program again.  This revealed:
 hackfusummonthedemonatyourperilitisnotintelligentactuallyitsferal
 
 # Challenge 07
+
+![noise](_readme_images/challenge_07_noise.jpg)
+
 This challenge was fairly simplistic -- probably spent the least amount of time 
 on this one.  There are three images.  Two inputs and only one output.  The goal
 is to find the 2nd output.
@@ -220,6 +234,9 @@ with my phone - the qr code revealed:
 hackfuwearehonouredtohavewithusarevolutionaryofadifferentcalibre
 
 # Challenge 08
+
+![kilroy](_readme_images/challenge_08_killroy.jpg)
+
 This is the first challenge where I stumbled pretty hard and learned a lesson in humility.
 I cannot explain this challenge without first griping about some missteps.  Like the 
 other challenges I tried to follow wherever the puzzle's clues led me - believing that the
@@ -288,6 +305,8 @@ hackfuthecolourintheoddbandsonthemeteorwasimpossibletodescribeonlybyanalogycould
 
 Finished this puzzle about 40 hours before the deadline.
 
+![done](_readme_images/challenge_08_done.jpg)
+
 # Challenge 09
 The APK file in this challenge was thematically relevant with several other references
 to Motorolla.  This was the first time I had encountered this type of file and a Google
@@ -311,6 +330,9 @@ hackfuwhereitlandswesetourscene
 
 
 # Challenge 10
+
+![notyetdone](_readme_images/challenge_10_notyetdone.jpg)
+
 Although Challenge 8 threw me for a loop and Challenge 1 took 12 days - I think 
 this was the most difficult challenge in terms of doing the work.  You can know you have teh answer, 
 but if you can't push through the logic of what is presented it won't matter.
@@ -329,9 +351,9 @@ particular memory address.  Only that memory address was not in the stackframe o
 what is called a buffer overflow attack and you enter in text that is long enough to reach where you want it to go
 but not intended by the original author.
 - Using OllyDbg and stepping through the program I entered in the following inputs:
-* asdf
-* asdf2
-* asdf3
+* 000000000000000000000000000000adde0000efbe0000031a4000E81740001d194000
+* 000000000000000000000000000000adde0000efbe0000031a4000E81740001d194000
+* 1111111111111111111111111111110df0edfeefbe00001d194000E8174000031a4000
 
 NotYetDone: input3
 - While I was now able to pass all three gates it simply exited instead of providing me with the key.
@@ -346,3 +368,5 @@ to generate the decryption key:
 - Using this as the xoring routine revealed: 
 hackfutwinkleoutnowfoullittlestarwehavenointerestinwhatyouare
 
+# Challenge 11
+- I never found it... :(
